@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --primary-bg-color: hsla(0, 0%, 10%, 1);
+    --secondary-bg-color: hsla(0, 0%, 8%, 1);
+
+    --text-color: hsla(0, 0%, 100%, 1);
+
+}
+
+body {
+    background-color: var(--primary-bg-color);
+
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
+}
+
+#app {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    height: 10rem;
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--secondary-bg-color);
+}
+
+header .app-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+header #menu-icon,
+header #menu-icon::before,
+header #menu-icon::after {
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    background-color: hsla(341, 71%, 41%, 1);
+    border-radius: 999px;
+}
+
+header #menu-icon {
+    top: 17px;
+}
+
+header #menu-icon::before {
+    margin-top: 4px;
+}
+  
+header #menu-icon::after {
+    margin-top: 8px;
+    width: .8rem;
+}
+
+span#weekday {
+    display: block;
+    margin-left: 2.7rem;
+
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    text-align: center;
+}
+
+.icons {
+    width: 9.2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.8rem;
+}
+
+.calendar-days .day {
+    width: 3.2rem;
+    height: 3.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: var(--primary-bg-color);
+    border-radius: 12px;
+}
+
+.calendar-days .day span:nth-child(even) {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.calendar-days .day span:nth-child(odd) {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+}
