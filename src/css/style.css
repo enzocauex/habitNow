@@ -66,6 +66,24 @@ header #menu-icon::after {
     width: 1rem;
 }
 
+.habits {
+    gap: 1rem;
+}
+
+ul li {
+    height: 5.4rem;
+    margin: 1rem .6rem 0;
+    border-radius: 1.4rem;
+    background: var(--secondary-bg-color);
+}
+
+.menu-open {
+    position: absolute;
+    height: 100vh;
+    width: 10px;
+    background-color: var(--primary-bg-color);
+}
+
 span#weekday {
     display: block;
     margin-left: 3.7rem;
@@ -134,4 +152,8 @@ button {
     background: #D52059;
     border-radius: 12px;
     border: none;
+}
+
+button:hover {
+    background: #d82e64;
 }
