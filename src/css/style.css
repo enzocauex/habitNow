@@ -24,6 +24,7 @@ body {
 
 #app {
     width: 100%;
+    height: 100vh;
     margin: auto;
 }
 
@@ -70,7 +71,7 @@ header #menu-icon::after {
     gap: 1rem;
 }
 
-ul li {
+.habits ul li {
     height: 5.4rem;
     margin: 1rem .6rem 0;
     border-radius: 1.4rem;
@@ -141,12 +142,12 @@ span#weekday {
     text-align: center;
 }
 
-button {
+#add-button {
     width: 50px;
     height: 50px;
     position: fixed;
 
-    bottom: 30px;
+    bottom: 100px;
     right: 20px;
 
     background: #D52059;
@@ -154,6 +155,38 @@ button {
     border: none;
 }
 
-button:hover {
+#add-button button:hover {
     background: #d82e64;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 7rem;
+    background-color: var(--secondary-bg-color)
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer button {
+    border: none;
+    background-color: transparent;
+    width: 5.2rem;
+    height: 2.8rem;
+}
+
+footer img {
+    height: 22px;
+    width: 22px;
 }
