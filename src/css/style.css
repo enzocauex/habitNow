@@ -9,6 +9,7 @@
 
     --primary-bg-color: hsla(0, 0%, 10%, 1);
     --secondary-bg-color: hsla(0, 0%, 8%, 1);
+    --primary-red-color: hsl(1, 79%, 56%);
 
     --text-color: hsla(0, 0%, 100%, 1);
 
@@ -50,7 +51,7 @@ header #menu-icon::after {
     content: "";
     width: 2.2rem;
     height: 3px;
-    background-color: hsla(341, 71%, 41%, 1);
+    background-color: var(--primary-red-color);
     border-radius: 999px;
 }
 
@@ -125,7 +126,7 @@ span#weekday {
 }
 
 .calendar-days .day.select {
-    background: #D52059;
+    background: var(--primary-red-color);
 }
 
 .calendar-days .day span:nth-child(even) {
@@ -150,13 +151,14 @@ span#weekday {
     bottom: 100px;
     right: 20px;
 
-    background: #D52059;
+    background: var(--primary-red-color);
     border-radius: 12px;
     border: none;
 }
 
 #add-button button:hover {
-    background: #d82e64;
+    background: var(--primary-red-color);
+    filter: brightness(1.1);
 }
 
 footer {
