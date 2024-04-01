@@ -1,12 +1,11 @@
 const weekdays = document.querySelectorAll('.day span')
 const days = document.querySelectorAll(".day")
 const menu = document.querySelector(".menu-open")
-const button = document.querySelector("button")
+const button = document.querySelector("#add-button")
 
 const habits = JSON.parse(localStorage.getItem('habits')) || [];
 const habit = "";
-const ulList = document.querySelector("ul")
-
+const ulList = document.querySelector(".habits ul")
 
 // functions
 
@@ -31,8 +30,7 @@ function addHabit(event) {
         
     localStorage.setItem("habits", JSON.stringify(habits))
     ulList.innerHTML += `<li></li>`
-    habit.value = ""
-    console.log('oi')
+    habit.value = "";
 }
 
 // events
