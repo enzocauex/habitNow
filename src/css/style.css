@@ -126,7 +126,7 @@ span#weekday {
     border-radius: 12px;
 }
 
-.calendar-days .day.select {
+.calendar-days .day.selected {
     background: var(--primary-red-color);
 }
 
@@ -180,9 +180,19 @@ footer ul {
 
 footer ul li {
     list-style: none;
+    text-align: center;
+}
+
+footer button.selected {
+    border-radius: 1.5rem;
+    background-color: #221E1E;
 }
 
 footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: none;
     background-color: transparent;
     width: 5.2rem;

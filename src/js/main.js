@@ -1,11 +1,5 @@
-const weekdays = document.querySelectorAll('.day span')
-const days = document.querySelectorAll(".day")
-const menu = document.querySelector(".menu-open")
-const button = document.querySelector("#add-button")
-
-const habits = JSON.parse(localStorage.getItem('habits')) || [];
-const habit = "";
-const ulList = document.querySelector(".habits ul")
+// imports 
+import { weekdays, days, footerButtons, menu, button, habits, habit, ulList } from "./constants.js"
 
 // functions
 
@@ -15,10 +9,10 @@ function selectItem(event) {
     days.forEach(removeActiveClass)
 
     function removeActiveClass(day) {
-        day.classList.remove('select')
+        day.classList.remove('selected')
     }
 
-    day.classList.add("select")
+    day.classList.add("selected")
 }
 
 function addHabit(event) {
@@ -31,6 +25,17 @@ function addHabit(event) {
     localStorage.setItem("habits", JSON.stringify(habits))
     ulList.innerHTML += `<li></li>`
     habit.value = "";
+}
+
+function handleButtons(e) {
+    const item = e.currentTarget
+    
+    footerButtons.forEach(removeActiveClass)
+
+    function removeActiveClass(item) {
+        item.classList.remove('selected')
+    }
+    item.classList.add('selected')
 }
 
 // events
@@ -47,4 +52,10 @@ menu.addEventListener('click', (menu) => {
 
 button.addEventListener('click', () => {
     addHabit()
+})
+
+footerButtons.forEach(footerButtons => {
+    footerButtons.addEventListener('click', (e) => {
+        handleButtons(e)
+    })
 })
